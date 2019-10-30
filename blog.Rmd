@@ -1,0 +1,88 @@
+---
+title: "You too can produce meaningful plots using ggplot2"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+#### **What is ggplot2?**
+
+Ggplot2 is a package in R that allows us to build versatile and dynamic graphics. This package integrates data visualization and data wrangling that would not be easily produced using base R functions. While producing graphs using ggplot2, it allows the user to gain insight on how to compose appropriate graphics and learn about the wide range of features within ggplot2. Plots can explore structure in the data that can't be detected with numerical summaries. Therefore, plots are an important communication skill and ggplot2 is an excellent tool that produces clear graphs. 
+
+#### **How does ggplot2 work?**
+
+ We need to install, if not installed already, onto Rstudio and reference the package. 
+
+```{r message=FALSE}
+library("ggplot2") #reference package
+```
+
+
+Using ggplot2, we can create a skeleton plot of the data and variables we wish to visually analyze and continue enhancing our skeleton plot with layers and elements. The main functions needed when creating a plot in ggplot2 is ggplot(), followed by the type of graph we wish to produce. You can select the form of data representation by typing 'geom_' and after the underscore, a list of possible plot options appear. You can also refer to this [ggplot2 cheat sheet](https://rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf) for the full list and explanation of each.
+
+We will use a R dataset called diamonds to explore ggplot2. This dataset consists of 53,940 observations on 10 variables. Below, we have produced a skeleton plot with this dataset to analyze how prices on diamonds varies among the cut and carat of a diamond.
+
+```{r}
+ggplot(diamonds) +
+  geom_point(aes(x=carat,y=price)) #set the variables wanting to analyze as x and y variables 
+    #geom_point displays a scatterplot 
+
+```
+
+
+Using the col argument inside the aes function, we can color the observations by a variable name as well. We will color the data points in the scatter plot by the cut of diamonds. Adding this layer of color onto our scatter plot creates a more meaningful graph because it adds another dimension to our graph. We can now also analyze whether the type of cut of a diamond has any relationship with the price and carat weight.
+
+
+```{r}
+ggplot(diamonds) +
+  geom_point(aes(x=carat,y=price,col=cut)) #coloring the observations by cut
+
+```
+
+
+We're now able to distinguish which diamond cut weighs more and costs more based on the most frequent colors. Although we do see a general trend, the overlapping data points can take away from the graph. To avoid overplotting, we can use the facet_wrap function within ggplot2. Facetwrap produces multi-panel plots of the observations by a variable. 
+
+
+```{r}
+ggplot(diamonds) +
+  geom_point(aes(x=carat,y=price,col=cut)) +
+  facet_wrap(~cut) #creating separate panels by cut
+
+```
+
+
+Adding a facet_wrap layer produced an information rich plot and it is easier to facilitate comparison. The main goal of any graph is to include enough information so that the audience interprets the graph clearly. Our scatterplot is visually appealing, but we now need to describe what has been graphed by adding comprehensive axis, titles, and legends. We can add a title and label the axis using the labs function.
+
+This dataset contains clear variable names, but there will be datasets that have abbreviated variables. It is important to adjust the variable on the graphs, so that the audience does not need to read the dataset to understand what is being shown. 
+
+
+
+```{r}
+
+ggplot(diamonds) +
+  geom_point(aes(x=carat,y=price,col=cut)) +
+  facet_wrap(~cut)+
+  labs(title= "Scatter plot of the price and carat of diamonds by cut", x="Carat", y="Price (in US Dollars)") + 
+  theme(plot.title=element_text(hjust = 0.5)) #centering the title of our plot and creating title in labs function
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

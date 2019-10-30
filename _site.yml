@@ -1,0 +1,29 @@
+name: "Karina Deyanira Camarena"
+output_dir: "."
+navbar:
+  title: "Home"
+  left:
+    - text: "Blog"
+      href: blog.html
+    - text: "Projects"
+      href: projects.html
+      
+  right:    
+    - icon: fa-envelope fa-lg
+      href: mailto:<kdcama4002@med.cornell.edu>
+    - icon: fa-linkedin fa-lg
+      href: https://www.linkedin.com/in/karina-camarena-839561a5/
+    - icon: fa-github fa-lg
+      href: https://github.com/kdcam19
+    - icon: fa-twitter fa-lg
+      href: https://twitter.com/KarinaCamaren14
+
+
+
+output:
+  html_document:
+    theme: sandstone
+    css: "style.css"
+  
+  
+  
