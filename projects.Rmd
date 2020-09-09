@@ -1,0 +1,24 @@
+---
+title: "Projects"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+### Predict Latent Class Mixed Model Classes in COPD Study
+
+My graduate capstone project specialized in machine learning methods to predict latent class mixed model classes in patients with Chronic Obstructive Pulmonary Disease. I aimed to identify distinct quality of life trajectories in patients diagnosed with COPD. Upon identification of trajectories, Lasso, Random Forest, and Support Vector Machine algorithms were utilized to predict the class membership of patients to these trajectories. LCMM model showed 2 distinct quality of life trajectories, and Lasso regression had the best prediction accuracy with 80% compared to the other algorithms. 
+
+My final poster and abstract were presented at the Weill Cornell Medical College's Master's Project Day, which can be accessed here - [Abstract](capstone_abstract.pdf); [Poster](Capstone_poster_LCM_Final.pdf)
+
+
+### Interactive Dashboard Application
+
+Using the data provided by Happy Valley Meat Company, I created a [Shiny App](https://karcam19.shinyapps.io/ds1_midterm/) that shows the environmental impact of the weight of meat for each cut. The purpose of this application is to incentivize restaurants to decrease emissions through data visualizations comparing water, CO2 emissions, and land usage per cut and cow.
+
+
+
