@@ -1,0 +1,15 @@
+---
+title: 'Karina Camarena '
+---
+
+```{r, out.width = '30%', fig.align="center", echo = FALSE}
+library(knitr)
+include_graphics("Camarena.JPG")
+```
+
+
+I am a young professional seeking career opportunities in data analytics/science. I graduated from the [University of Illinois](https://stat.illinois.edu/) with a Bachelor's degree in statistics and a minor in informatics in 2019. I obtained a MS in biostatistics and data science from [Cornell University](https://gradschool.weill.cornell.edu/programs/population-health-sciences) in August 2020. 
+
+During my time at Cornell University, I have been exposed to a variety of big data such as longitudinal, clinical, EHR, and genomics. I have gained experience with data cleaning, manipulation, and validating data using R, Python, and SQL. The emphasis of statistical learning throughout my academic career has introduced me to machine learning priniples, including classification, regression, and predictive analysis. 
+
+My resume is available [here](KarinaCamarena_resume.pdf) 
